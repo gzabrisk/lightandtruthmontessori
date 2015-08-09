@@ -1,0 +1,46 @@
+@mixin button($color) {
+	color: #fff;
+	background: $color;
+	border: none;
+	font-family: $secondary-font-family;
+	font-weight: 400;
+	font-size: 1.5rem;
+	padding: 1rem 2.4rem .9rem;
+	border-radius: .3rem;
+	text-transform: uppercase;
+	text-decoration: none;
+	display: inline-block;
+
+	&:hover, &:focus {
+		background: darken($color, 10%);
+	}
+
+
+}
+
+.button {
+	color: #fff;
+	background: $brand-color;
+	border: none;
+	font-family: $secondary-font-family;
+	font-weight: 400;
+	font-size: 1.5rem;
+	padding: 1rem 2.4rem .9rem;
+	border-radius: .3rem;
+	cursor: pointer;
+	text-transform: uppercase;
+	text-decoration: none;
+	display: inline-block;
+
+	&:hover {
+		background: darken($brand-color, 10%);
+	}
+
+	&--variant {
+		background: darken($secondary-color, 30%);
+
+		&:hover {
+			background: darken($secondary-color, 40%);
+		}
+	}
+}

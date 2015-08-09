@@ -1,0 +1,203 @@
+$brand-color: #D67752;
+$background-color: #F6EEDA;
+$secondary-color: #B9D1C9;
+$text-color: #4E4E4C;
+$base-font-family: Georgia, serif;
+$secondary-font-family: Helvetica, Arial, sans-serif;
+
+@mixin mq($break) {
+	@if $break == "large" {
+		@media (min-width: 690px) {
+			@content;
+		}
+	}
+}
+
+* {
+	box-sizing: border-box;
+}
+
+html { 
+	font-size: 62.5%;
+}
+
+body {
+	background: $background-color;
+	font-family: $base-font-family; 
+	font-weight: 300;
+	font-size: 1.6rem;
+	color: $text-color;
+}
+
+p, ul {
+	line-height: 1.5em;
+	margin: 0 0 1.5em;
+
+	&.serious {
+		font-size: 1.9rem;
+	}
+}
+
+li {
+	list-style-type: disc;
+	margin-bottom: 0.5em;
+	margin-left: 1.5em;
+}
+
+a {
+	color: blue;
+}
+
+h1, h2 {
+	font-family: $secondary-font-family;
+	font-size: 2.4rem;
+	font-weight: 300;
+	margin-bottom: 1em;
+	line-height: 1.3em;
+
+	@include mq(large) {
+		font-size: 3rem;
+	}
+
+}
+
+h2 {
+	font-size: 1.8rem;
+}
+
+p + h2 {
+	margin-top: 2em;
+}
+
+.group {
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+}	
+
+.container {
+	margin: 0 auto;
+	max-width: 800px;	
+	padding: 0 7%;
+	position: relative;
+
+	& > :last-child {
+		margin-bottom: 0;
+	}
+}
+
+.site-header {
+	background: $brand-color;
+	background: radial-gradient(lighten($brand-color, 10%), $brand-color);
+	text-align: center;
+	overflow: hidden;
+
+	@include mq(large) {
+		padding: 3.6rem 0;
+
+		.container {
+			display: -webkit-flex;
+			-webkit-justify-content: space-between;
+			-webkit-align-items: center;
+		}	
+	}
+
+	&__title {
+		font-size: 3.2rem;
+		margin: 2.4rem 0;
+		color: #fff;
+
+		@include mq(large) {
+			font-size: 3rem;
+			float: left;
+			margin: 0;
+		}
+	}
+}
+
+.site-nav {
+	display: -webkit-flex;
+
+	@include mq(large) {
+		float: right;
+		width: 70%;
+		font-size: 2rem;
+	}
+
+	&__item {
+		text-decoration: none;
+		color: $background-color;
+		-webkit-flex: 1;
+		display: block;
+		padding: 1.2rem;
+
+		&:hover {
+			color: #fff;
+		}	
+	}
+
+}
+
+.section {
+	padding: 3rem 0;
+	position: relative;
+
+	@include mq(large) {
+		padding: 4.8rem 0;
+	}
+
+	&__title {
+		text-align: center;
+
+	}
+
+	&__action {
+		text-align: center;
+
+		@include mq(large) {
+			margin-top: 4.2rem; 
+		}
+	}
+
+	&--hero {
+		text-align: center;
+		padding: 5rem 0;
+
+		@include mq(large) {
+			padding: 12rem 0;
+		}
+	}
+
+	&--variant {
+		background: $secondary-color;
+		color: darken($secondary-color, 50%);
+	}
+
+	&--background {
+		&:before {
+			content: "";
+			display: block;
+			background-image: url("../images/children-posing.jpg");
+			background-size: cover;
+			background-repeat: none;
+			background-position: center 10%;
+			-webkit-filter: grayscale(100%);
+			opacity: 0.1;
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+		};
+	}
+
+}
+
+.site-footer {
+	background: $brand-color;
+	color: #fff;
+	padding: 2.4rem 0; 
+	text-align: center;
+}
