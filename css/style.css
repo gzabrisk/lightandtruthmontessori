@@ -71,6 +71,7 @@ body {
   color: #4E4E4C; }
 
 p, ul {
+  font-size: 1.6rem;
   line-height: 1.5em;
   margin: 0 0 1.5em; }
   p.serious, ul.serious {
