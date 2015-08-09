@@ -67,15 +67,13 @@ body {
   background: #F6EEDA;
   font-family: Georgia, serif;
   font-weight: 300;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   color: #4E4E4C; }
 
 p, ul {
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   line-height: 1.5em;
   margin: 0 0 1.5em; }
-  p.serious, ul.serious {
-    font-size: 1.9rem; }
 
 li {
   list-style-type: disc;
@@ -87,7 +85,7 @@ a {
 
 h1, h2 {
   font-family: Helvetica, Arial, sans-serif;
-  font-size: 2.4rem;
+  font-size: 2.8rem;
   font-weight: 300;
   margin-bottom: 1em;
   line-height: 1.3em; }
@@ -125,10 +123,13 @@ p + h2 {
       .site-header .container {
         display: -webkit-flex;
         -webkit-justify-content: space-between;
-        -webkit-align-items: center; } }
+        -webkit-align-items: center;
+        display: flex;
+        justify-content: space-between;
+        align-items: center; } }
   .site-header__title {
-    font-size: 3.2rem;
-    margin: 2.4rem 0;
+    font-size: 3.6rem;
+    margin: 3rem 0 1.8rem;
     color: #fff; }
     @media (min-width: 690px) {
       .site-header__title {
@@ -137,18 +138,23 @@ p + h2 {
         margin: 0; } }
 
 .site-nav {
-  display: -webkit-flex; }
+  display: -webkit-flex;
+  display: flex;
+  margin: 0 -7%; }
   @media (min-width: 690px) {
     .site-nav {
       float: right;
       width: 70%;
-      font-size: 2rem; } }
+      font-size: 2rem;
+      margin: 0; } }
   .site-nav__item {
+    font-size: 1.8rem;
     text-decoration: none;
     color: #F6EEDA;
     -webkit-flex: 1;
+    flex: 1;
     display: block;
-    padding: 1.2rem; }
+    padding: 1.2rem 0; }
     .site-nav__item:hover {
       color: #fff; }
 
