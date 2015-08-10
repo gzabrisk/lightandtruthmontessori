@@ -29,6 +29,10 @@ body {
 	color: $text-color;
 }
 
+a {
+	color: $brand-color;
+}
+
 p, ul {
 	font-size: 1.8rem;
 	line-height: 1.5em;
@@ -40,10 +44,6 @@ li {
 	list-style-type: disc;
 	margin-bottom: 0.5em;
 	margin-left: 1.5em;
-}
-
-a {
-	color: blue;
 }
 
 h1, h2 {
@@ -179,6 +179,10 @@ p + h2 {
 	&--variant {
 		background: $secondary-color;
 		color: darken($secondary-color, 50%);
+
+		a {
+			color: darken($secondary-color, 70%);
+		}
 	}
 
 	&--background {
