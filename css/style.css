@@ -229,7 +229,7 @@ p + h2 {
     margin-top: 0.1em; }
 
 .button {
-  color: #fff;
+  color: #fff !important;
   background: #D67752;
   border: none;
   font-family: Helvetica, Arial, sans-serif;
