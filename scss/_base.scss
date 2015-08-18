@@ -199,7 +199,7 @@ p + h2 {
 		text-align: center;
 
 		@include mq(large) {
-			margin-top: 4.2rem; 
+			margin: 4.2rem 0; 
 		}
 	}
 
@@ -216,7 +216,7 @@ p + h2 {
 		color: darken($secondary-color, 50%);
 
 		a {
-			color: darken($secondary-color, 70%);
+			color: darken($secondary-color, 60%);
 		}
 	}
 

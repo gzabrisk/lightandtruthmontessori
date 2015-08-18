@@ -264,7 +264,7 @@ p + h2 {
 }
 @media (min-width: 690px) {
   .section__action {
-    margin-top: 4.2rem;
+    margin: 4.2rem 0;
   }
 }
 .section--hero {
@@ -280,7 +280,7 @@ p + h2 {
   color: #37544a;
 }
 .section--variant a {
-  color: #0f1614;
+  color: #23352f;
 }
 .section--centered {
   text-align: center;
@@ -350,6 +350,10 @@ p + h2 {
   .large-hide {
     display: none;
   }
+}
+
+.subdued {
+  color: #82827e;
 }
 
 .button {
