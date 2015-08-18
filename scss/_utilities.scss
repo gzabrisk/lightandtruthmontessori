@@ -1,0 +1,16 @@
+.mobile-hide {
+	display: none;
+
+	@include mq(large) {
+		display: block;
+	}	
+}
+
+.large-hide {
+	display: block;
+
+	@include mq(large) {
+		display: none;
+	}	
+}
+
