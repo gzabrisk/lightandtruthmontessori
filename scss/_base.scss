@@ -80,6 +80,11 @@ p + h2 {
 	}
 }	
 
+.hidden {
+	position: absolute;
+	left: -999999em;
+}
+
 .container {
 	margin: 0 auto;
 	max-width: 800px;	
@@ -284,6 +289,41 @@ p + h2 {
 
 }
 
+.action-bar {
+	background: darken($secondary-color, 60%);
+	padding: 2.4rem 0;
+}
+
+.choices {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+
+	@include mq(large) {
+		flex-direction: row;
+	}
+
+	&__item {
+		margin: 0;
+		list-style: none;
+		text-align: center;
+		flex: 1;
+
+		a {
+			display: block;
+		}
+
+		& + & {
+			margin-top: 1.2rem;
+
+			@include mq(large) {
+				margin-top: 0;
+				margin-left: 2.4rem;
+			}
+		}
+	}
+}
+
 .map {
 	position: relative;
 	padding-bottom: 75%; // This is the aspect ratio
@@ -303,5 +343,15 @@ p + h2 {
 	background: $brand-color;
 	color: #fff;
 	padding: 2.4rem 0; 
+	text-align: center;
+}
+
+.standout {
+	background: hsla(0, 100%, 100%, 0.3);
+	padding: 1.2rem 1.8rem;
+	border-radius: 4px;
+}
+
+.centered {
 	text-align: center;
 }
