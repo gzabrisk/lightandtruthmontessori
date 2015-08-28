@@ -182,6 +182,7 @@ p + h2 {
 }
 
 .section {
+
 	padding: 3rem 0;
 	position: relative;
 	overflow: hidden;
@@ -246,13 +247,14 @@ p + h2 {
 		$border-style: 1px solid darken($secondary-color, 10%);
 		$spacing-unit: 2.4rem;
 
-		border-bottom: $border-style;
+		border-top: $border-style;
+		clear: both;
 
 		& + & {
 			padding: $spacing-unit 0 0;
 		}
 
-		&:last-child {
+		&:first-of-type {
 			border: 0;
 		}
 
@@ -261,20 +263,40 @@ p + h2 {
 		}
 
 		@include mq(large) {
-			width: 50%;
-			float: left;
-			border-bottom: 0;
-			border-right: $border-style;
-			padding-right: $spacing-unit;
 
-			& + & {
-				padding-top: 0;
-				padding-left: $spacing-unit;
+			&--half {
+				width: 50%;
+				float: left;
+				clear: none;
+				border-top: 0;
+				padding-right: $spacing-unit;
+
+				& + & {
+					padding-top: 0;
+					padding-left: $spacing-unit;
+					border-left: $border-style;
+				}
 			}
+
 		}
 
 	}
 
+}
+
+.map {
+	position: relative;
+	padding-bottom: 75%; // This is the aspect ratio
+	height: 0;
+	overflow: hidden;
+
+	iframe {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100% !important;
+		height: 100% !important;
+	}
 }
 
 .site-footer {

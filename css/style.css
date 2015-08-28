@@ -302,29 +302,45 @@ p + h2 {
   right: 0;
 }
 .section__piece {
-  border-bottom: 1px solid #9abdb1;
+  border-top: 1px solid #9abdb1;
+  clear: both;
 }
 .section__piece + .section__piece {
   padding: 2.4rem 0 0;
 }
-.section__piece:last-child {
+.section__piece:first-of-type {
   border: 0;
 }
 .section__piece .button {
   margin-top: 0.7em;
 }
 @media (min-width: 690px) {
-  .section__piece {
+  .section__piece--half {
     width: 50%;
     float: left;
-    border-bottom: 0;
-    border-right: 1px solid #9abdb1;
+    clear: none;
+    border-top: 0;
     padding-right: 2.4rem;
   }
-  .section__piece + .section__piece {
+  .section__piece--half + .section__piece--half {
     padding-top: 0;
     padding-left: 2.4rem;
+    border-left: 1px solid #9abdb1;
   }
+}
+
+.map {
+  position: relative;
+  padding-bottom: 75%;
+  height: 0;
+  overflow: hidden;
+}
+.map iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
 }
 
 .site-footer {
