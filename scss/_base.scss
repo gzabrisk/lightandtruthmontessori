@@ -2,8 +2,8 @@ $brand-color: #D67752;
 $background-color: #F6EEDA;
 $secondary-color: #B9D1C9;
 $text-color: #4E4E4C;
-$base-font-family: Georgia, serif;
-$secondary-font-family: Helvetica, Arial, sans-serif;
+$base-font-family: 'Lora', Georgia, serif;
+$secondary-font-family: 'Open Sans', Helvetica, Arial, sans-serif;
 
 @mixin mq($break) {
 	@if $break == "large" {
@@ -199,8 +199,11 @@ p + h2 {
 
 	img {
 		max-width: 100%;
-		border-radius: 3px;
 		display: block;
+	}
+
+	&__image {
+		border-radius: 3px;
 	}
 
 	&__title {
@@ -256,7 +259,7 @@ p + h2 {
 	}
 
 	&__piece {
-		$border-style: 1px solid darken($secondary-color, 10%);
+		$border-style: 1px solid desaturate(darken($background-color, 10%), 30%);
 		$spacing-unit: 2.4rem;
 
 		border-top: $border-style;
@@ -428,5 +431,25 @@ p + h2 {
 		margin-bottom: 0;
 		border-bottom-right-radius: 0;
 		border-bottom-left-radius: 0;
+	}
+}
+
+.bio {
+
+	&__image {
+		$bio-pic-size: 160px;
+		width: $bio-pic-size;
+		height: auto;
+		border-radius: $bio-pic-size / 2;
+		margin: 0 auto 1em;
+		//border: 6px solid darken($background-color, 6%);
+
+		@include mq(large) {
+			$bio-pic-size: 200px;
+			width: $bio-pic-size;
+			border-radius: $bio-pic-size / 2;
+			float: right;
+			margin: .5em 0 .5em .5em;
+		}
 	}
 }
