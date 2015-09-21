@@ -513,14 +513,6 @@ p + h2 {
   border-radius: 80px;
   margin: 0 auto 1em;
 }
-@media (min-width: 690px) {
-  .bio__image {
-    width: 200px;
-    border-radius: 100px;
-    float: right;
-    margin: .5em 0 .5em .5em;
-  }
-}
 
 .mobile-hide {
   display: none;

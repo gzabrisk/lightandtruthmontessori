@@ -444,12 +444,12 @@ p + h2 {
 		margin: 0 auto 1em;
 		//border: 6px solid darken($background-color, 6%);
 
-		@include mq(large) {
-			$bio-pic-size: 200px;
-			width: $bio-pic-size;
-			border-radius: $bio-pic-size / 2;
-			float: right;
-			margin: .5em 0 .5em .5em;
-		}
+		// @include mq(large) {
+		// 	$bio-pic-size: 200px;
+		// 	width: $bio-pic-size;
+		// 	border-radius: $bio-pic-size / 2;
+		// 	float: right;
+		// 	margin: .5em 0 .5em .5em;
+		// }
 	}
 }
